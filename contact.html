@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <meta charset="UTF-8">
+    <title>АвтоГалактика</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+</head>
+<body>
+    <header>АвтоГалактика</header>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="contact.html">Контакты</a>
+    </nav>
+
+    <section class="hero" data-aos="fade-down">
+        <h1>Найди авто своей мечты</h1>
+        <p>Лучшие предложения от официального дилера</p>
+    </section>
+
+    <section class="filter" data-aos="fade-right">
+        <select id="brandFilter">
+            <option value="all">Все марки</option>
+            <option value="bmw">BMW</option>
+            <option value="audi">Audi</option>
+            <option value="mercedes">Mercedes</option>
+        </select>
+    </section>
+
+    <section class="cars" data-aos="fade-up">
+        <div class="car" data-brand="bmw">
+            <img src="images/bmw.jpg" alt="BMW X5">
+            <h3>BMW X5</h3>
+        </div>
+        <div class="car" data-brand="audi">
+            <img src="images/audi.jpg" alt="Audi Q7">
+            <h3>Audi Q7</h3>
+        </div>
+        <div class="car" data-brand="mercedes">
+            <img src="images/mercedes.jpg" alt="Mercedes GLE">
+            <h3>Mercedes GLE</h3>
+        </div>
+    </section>
+
+    <section class="signup" data-aos="zoom-in">
+        <h2>Оставьте заявку</h2>
+        <form action="https://formspree.io/f/your-id" method="POST">
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Интересующая модель"></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+
+    <section class="map-section" data-aos="fade-up">
+        <h2>Где мы находимся</h2>
+        <div id="map" style="height: 300px;"></div>
+    </section>
+
+<section class="stats" data-aos="fade-up">
+  <div class="stat">
+    <h3><span class="counter" data-target="1200">0</span>+</h3>
+    <p>Продано авто</p>
+  </div>
+  <div class="stat">
+    <h3><span class="counter" data-target="15">0</span> лет</h3>
+    <p>На рынке</p>
+  </div>
+  <div class="stat">
+    <h3><span class="counter" data-target="5">0</span> звезд</h3>
+    <p>Рейтинг клиентов</p>
+  </div>
+</section>
+
+<section class="features" data-aos="zoom-in-up">
+  <h2>Почему выбирают нас?</h2>
+  <div class="features-grid">
+    <div class="feature">🔥 Только новые авто</div>
+    <div class="feature">📦 Гарантия до 5 лет</div>
+    <div class="feature">💰 Выгода до 800 000 ₽</div>
+    <div class="feature">🚀 Быстрая доставка</div>
+  </div>
+</section>
+
+<div class="theme-toggle">
+  <label>
+    <input type="checkbox" id="themeSwitcher">
+    🌗 Переключить тему
+  </label>
+</div>
+
+    <footer>&copy; 2025 АвтоГалактика. Все права защищены.</footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
